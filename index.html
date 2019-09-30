@@ -26,7 +26,13 @@
 
 <body>
     <main>
-      
+      // remove password strength
+
+            add_filter( 'woocommerce_min_password_strength', 'uh_oh_weakpasswords' );
+
+            function uh_oh_weakpasswords() {
+            return 0;
+            }
     </main>
 
 
